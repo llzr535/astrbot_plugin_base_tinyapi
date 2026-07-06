@@ -1,0 +1,6 @@
+{
+  "tinyapi_key": {
+    "description": "tinyapi的key",
+    "type": "string"
+  }
+}
