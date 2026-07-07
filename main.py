@@ -27,8 +27,6 @@ class MyPlugin(Star):
         session = aiohttp.ClientSession(
             headers=self.headers
         )
-        await session.get(self.Tinyapi_base_url + self.net_search_api + f"?keyword={keyword}&type=guide")
-        await session.close()
         return session
 
     @filter.command("异环攻略")
