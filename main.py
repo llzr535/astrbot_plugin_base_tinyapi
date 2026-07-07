@@ -30,7 +30,7 @@ class MyPlugin(Star):
         return session
 
     @filter.command_group("异环")
-    def main():
+    def 异环(self):
         pass
     
     @异环.command("攻略")
