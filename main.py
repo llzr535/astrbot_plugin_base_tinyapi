@@ -29,7 +29,7 @@ class MyPlugin(Star):
         )
         return session
 
-    @filter.command("异环")
+    @filter.command_group("异环")
     def main():
         pass
     
