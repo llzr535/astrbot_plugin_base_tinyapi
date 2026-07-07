@@ -29,7 +29,11 @@ class MyPlugin(Star):
         )
         return session
 
-    @filter.command("异环攻略")
+    @filter.command("异环")
+    def main():
+        pass
+    
+    @异环.command("攻略")
     async def get_guide_url(self, event: AstrMessageEvent, keyword: str):
         session = await self.create_session()
         async with session.get(self.Tinyapi_base_url + self.net_search_api + f"?keyword={keyword}&type=guide") as resp:
