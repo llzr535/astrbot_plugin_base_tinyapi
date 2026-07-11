@@ -8,9 +8,9 @@ from playwright.async_api import async_playwright
 
 import aiohttp
 
-from astrbot.api import logger
+from astrbot.api import logger, AstrBotConfig
 from astrbot.api.event import AstrMessageEvent, filter
-from astrbot.api.star import Context, Star, Config
+from astrbot.api.star import Context, Star
 
 class search_result(TypedDict):
     name: str
@@ -23,7 +23,7 @@ class SessionEntry:
     last_access: float
 
 class nte_search_plugin(Star):
-    def __init__(self, context: Context, config: Config):
+    def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
         self.Tinyapi_base_url = "https://api.tinyaii.top"
         self.Nteguide_base_url = "https://nteguide.com/"
