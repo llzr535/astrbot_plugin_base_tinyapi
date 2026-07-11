@@ -3,9 +3,8 @@ from dataclasses import dataclass
 import os
 import tempfile
 import time
-import urllib.parse
 from typing import Dict, List, Optional, TypedDict
-from playwright.async_api import async_playwright, PlaywrightError
+from playwright.async_api import async_playwright
 
 import aiohttp
 
@@ -83,9 +82,6 @@ class nte_search_plugin(Star):
             self._browser = await self._playwright.chromium.launch(headless=True)
             logger.info("Playwright 浏览器已初始化")
             return True
-        except PlaywrightError as e:
-            logger.error(f"Playwright 启动失败: {e}")
-            return False
         except Exception as e:
             logger.error(f"初始化 Playwright 浏览器时发生未知错误: {e}")
             return False
