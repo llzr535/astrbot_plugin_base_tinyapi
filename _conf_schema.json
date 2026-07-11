@@ -2,5 +2,10 @@
   "tinyapi_key": {
     "description": "tinyapi的key",
     "type": "string"
+  },
+  "timeout": {
+    "description": "会话超时时间",
+    "type": "number",
+    "default": 60
   }
 }
